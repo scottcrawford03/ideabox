@@ -17,6 +17,8 @@
       <b>Tag:</b> <a href="/tags/<%= idea.tag %>"><%= idea.tag.upcase %></a><br>
       Version: <a href="<%= idea.id %>/versions"><%= idea.version %></a><br>
       <b><i>Created At</i></b><br>
+      <%= idea.day_created %>
+      <%= idea.time_created %>
       <form action='<%= idea.id %>/like' method='POST' disply: inline>
         <input type="submit" value="+">
         <a href="/<%= idea.id %>/edit">Edit</a>
