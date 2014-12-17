@@ -1,15 +1,6 @@
 require "yaml/store"
 
 class IdeaStore
-
-  def self.version
-    []
-  end
-
-  def self.find_history(id)
-    version.select {|item| item.id == id }
-  end
-
   def self.all
     ideas = []
     raw_ideas.each_with_index do |data, i|
@@ -46,7 +37,6 @@ class IdeaStore
   end
 
   def self.update(id, data)
-    version << data
     database.transaction do
       database['ideas'][id] = data
     end
