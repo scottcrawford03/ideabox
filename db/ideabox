@@ -1,8 +1,40 @@
 ---
 ideas:
-- title: do
-  description: it
-  tag: fart
-- title: Hey
-  description: What's up
-  tag: fart
+- title: sup
+  description: poop
+  rank: 0
+  tag: google
+  version: 3
+  history: &1
+  - !ruby/object:Idea
+    title: hi
+    description: there
+    rank: 0
+    id: 
+    tag: go
+    version: 0
+    history: *1
+  - !ruby/object:Idea
+    title: hi
+    description: there
+    rank: 0
+    id: 0
+    tag: google
+    version: 1
+    history: *1
+  - !ruby/object:Idea
+    title: sup
+    description: there
+    rank: 0
+    id: 0
+    tag: google
+    version: 2
+    history: *1
+  - !ruby/object:Idea
+    title: sup
+    description: poop
+    rank: 0
+    id: 0
+    tag: google
+    version: 3
+    history: *1

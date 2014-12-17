@@ -9,12 +9,13 @@
   <input type="submit"/>
 </form>
 <h3>Existing Ideas</h3>
-<ul>
+<ol>
   <% ideas.each do |idea| %>
     <li>
       <b>Title:</b> <%= idea.title %><br>
       <b>Description:</b> <%= idea.description %><br>
       <b>Tag:</b> <a href="/tags/<%= idea.tag %>"><%= idea.tag.upcase %></a><br>
+      Version: <a href="<%= idea.id %>/versions"><%= idea.version %></a><br>
       <b><i>Created At</i></b><br>
       <form action='<%= idea.id %>/like' method='POST' disply: inline>
         <input type="submit" value="+">
@@ -26,4 +27,4 @@
       </form>
     </li>
   <% end %>
-</ul>
+</ol>
