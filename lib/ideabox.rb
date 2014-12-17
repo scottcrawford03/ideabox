@@ -17,7 +17,9 @@ class IdeaBoxApp < Sinatra::Base
   end
 
   post '/' do
-    idea = IdeaStore.create(params[:idea])
+    idea = Idea.new(params[:idea])
+    idea.history << idea
+    IdeaStore.create(idea.to_h)
     redirect '/'
   end
 
@@ -32,7 +34,9 @@ class IdeaBoxApp < Sinatra::Base
   end
 
   put '/:id' do |id|
-    IdeaStore.update(id.to_i, params[:idea])
+    idea = IdeaStore.find(id.to_i)
+    idea.update!(params[:idea], idea)
+    IdeaStore.update(id.to_i, idea.to_h)
     redirect '/'
   end
 
@@ -45,5 +49,10 @@ class IdeaBoxApp < Sinatra::Base
 
   get '/tags/:tag' do |tag|
     erb :tags, locals: {tag: tag, ideas: IdeaStore.same_tag(tag)}
+  end
+
+  get '/:id/versions' do |id|
+    idea = IdeaStore.find(id.to_i)
+    erb :version, locals: {history: idea.history}
   end
 end

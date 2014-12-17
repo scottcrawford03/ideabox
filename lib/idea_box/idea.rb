@@ -4,7 +4,9 @@ class Idea
               :description,
               :rank,
               :id,
-              :tag
+              :tag,
+              :version,
+              :history
 
   def initialize(attributes)
     @title       = attributes['title']
@@ -12,6 +14,8 @@ class Idea
     @rank        = attributes['rank'] || 0
     @id          = attributes['id']
     @tag         = attributes['tag']
+    @version     = attributes['version'] || 0
+    @history     = attributes['history'] || []
   end
 
   def save
@@ -23,12 +27,22 @@ class Idea
       "title"       => title,
       "description" => description,
       "rank"        => rank,
-      "tag"         => tag
+      "tag"         => tag,
+      "version"     => version,
+      "history"     => history
     }
   end
 
   def like!
     @rank += 1
+  end
+
+  def update!(params, idea)
+    @history << idea
+    @title = params["title"]
+    @description = params["description"]
+    @tag = params["tag"]
+    @version += 1
   end
 
   def <=>(other)
