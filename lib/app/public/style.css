@@ -120,9 +120,15 @@ h1 {
 }
 
 #ideas {
-  border-style: inset;
-  margin-right: 30%;
-  margin-left: 30%;
+  list-style-position: inside;
+  width: 20%;
+  border: 2px inset;
+  border-color: black ;
+  border-radius: 25px;
+  padding: 30px;
+  margin: 10px;
+  margin-right: 35%;
+  margin-left:35%;
   text-align: left;
   color: white;
   background-color: rgba(144,144,144,0.3);
