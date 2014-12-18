@@ -1,6 +1,8 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require "sinatra/base"
+require "sinatra/contrib"
+require "sinatra/partial"
 require_relative '../lib/ideabox.rb'
 require "rack/test"
 require "nokogiri"
