@@ -119,7 +119,7 @@ h1 {
   font-size: 25px;
 }
 
-#ideas {
+.ideas {
   list-style-position: inside;
   width: 20%;
   border: 2px inset;

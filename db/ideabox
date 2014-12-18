@@ -173,3 +173,23 @@ ideas:
     created_at: *14
     day_created: Thursday
     time_created: 11:03 AM
+- title: this is a new idea
+  description: how do you do
+  rank: 0
+  tag: yup
+  version: 0
+  created_at: &16 2014-12-18 11:50:06.126408000 -07:00
+  day_created: Thursday
+  time_created: 11:50 AM
+  history: &15
+  - !ruby/object:Idea
+    title: this is a new idea
+    description: how do you do
+    rank: 0
+    id: 
+    tag: yup
+    version: 0
+    history: *15
+    created_at: *16
+    day_created: Thursday
+    time_created: 11:50 AM
