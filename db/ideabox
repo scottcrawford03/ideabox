@@ -193,3 +193,23 @@ ideas:
     created_at: *16
     day_created: Thursday
     time_created: 11:50 AM
+- title: this
+  description: idea
+  rank: 0
+  tag: rules
+  version: 0
+  created_at: &18 2014-12-18 12:09:39.534885000 -07:00
+  day_created: Thursday
+  time_created: 12:09 PM
+  history: &17
+  - !ruby/object:Idea
+    title: this
+    description: idea
+    rank: 0
+    id: 
+    tag: rules
+    version: 0
+    history: *17
+    created_at: *18
+    day_created: Thursday
+    time_created: 12:09 PM

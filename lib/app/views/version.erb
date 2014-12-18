@@ -1,14 +1,2 @@
 <h1>History</h1>
-<ol>
-  <% history.each do |idea| %>
-  <li>
-    <b>Title:</b> <%= idea.title %><br>
-    <b>Description:</b> <%= idea.description %><br>
-    <b>Tag:</b> <a href="/tags/<%= idea.tag %>"><%= idea.tag.upcase %></a><br>
-    <b>Version:</b> <%= idea.version %><br>
-    <b><i>Created At</i></b><br>
-    <%= idea.day_created %>
-    <%= idea.time_created %>
-  </li><br>
-  <% end %>
-</ol>
+<%= partial :'partials/idea', :collection => ideas %>

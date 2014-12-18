@@ -12,7 +12,7 @@ a:visited{
 
 h1 {
   color: white;
-  font-family: Futura;
+  font-family: "Courier New";
   text-align: center;
   background-color: gray;
   margin: auto;
@@ -124,7 +124,7 @@ h1 {
   width: 20%;
   border: 2px inset;
   border-color: black ;
-  border-radius: 25px;
+  border-radius: 20px;
   padding: 30px;
   margin: 10px;
   margin-right: 35%;
@@ -132,4 +132,9 @@ h1 {
   text-align: left;
   color: white;
   background-color: rgba(144,144,144,0.3);
+}
+
+#tag-names{
+  text-align: center;
+  color: white;
 }

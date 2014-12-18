@@ -1,17 +1,21 @@
 <h1>Sorted Tags</h1>
-<% grouped.each do |key, value| %>
-  <h2><%= key.upcase %></h2>
-  <ol>
-  <% value.each do |idea| %>
-    <li>
-      <b>Title:</b> <%= idea.title %><br>
-      <b>Description:</b> <%= idea.description %><br>
-      <b>Tag:</b> <a href="/tags/<%= idea.tag %>"><%= idea.tag.upcase %></a><br>
-      <b>Version:</b> <%= idea.version %><br>
-      <b><i>Created At</i></b><br>
-      <%= idea.day_created %>
-      <%= idea.time_created %>
-    </li><br>
-  <% end %>
-</ol>
+  <% grouped.each do |key, value| %>
+<div id="tag-names">
+    <h2><%= key.upcase %></h2>
+</div>
+    <ol>
+<div class="ideas">
+    <% value.each do |idea| %>
+      <li>
+        <b>Title:</b> <%= idea.title %><br>
+        <b>Description:</b> <%= idea.description %><br>
+        <b>Tag:</b> <a href="/tags/<%= idea.tag %>"><%= idea.tag.upcase %></a><br>
+        <b>Version:</b> <%= idea.version %><br>
+        <b><i>Created At</i></b><br>
+        <%= idea.day_created %>
+        <%= idea.time_created %>
+      </li><br>
+    <% end %>
+  </ol>
+</div>
 <% end %>

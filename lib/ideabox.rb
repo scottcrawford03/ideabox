@@ -8,13 +8,15 @@ class IdeaBoxApp < Sinatra::Base
     register Sinatra::Reloader
   end
 
+  register Sinatra::Partial
+  set :partial_template_engine, :erb
 
   not_found do
     erb :error
   end
 
   get '/' do
-    erb :index, locals: {ideas: IdeaStore.all.sort, idea: Idea.new(params)}
+    erb :index, locals: {ideas: IdeaStore.all.sort}
   end
 
   post '/' do
@@ -58,6 +60,6 @@ class IdeaBoxApp < Sinatra::Base
 
   get '/:id/versions' do |id|
     idea = IdeaStore.find(id.to_i)
-    erb :version, locals: {history: idea.history}
+    erb :version, locals: {ideas: idea.history}
   end
 end
