@@ -18,6 +18,7 @@ h1 {
   margin: auto;
   margin-bottom: 15px;
   font-size: 55px;
+  text-shadow: 2px 2px 3px #666666
 }
 
 .FORM-STUFF{
@@ -27,7 +28,7 @@ h1 {
   max-width: 500px;
   background: #F7F7F7;
   padding: 25px 15px 25px 10px;
-  font: 12px Georgia, "Times New Roman", Times, serif;
+  font: 12px "Courier New", "Times New Roman", Times, serif;
   color: #888;
   text-shadow: 1px 1px 1px #FFF;
   border:1px solid #E4E4E4;
@@ -46,6 +47,7 @@ h1 {
 }
 
 #title{
+  text-align: center;
   border: 1px solid #DADADA;
   color: #888;
   height: 30px;
@@ -63,6 +65,7 @@ h1 {
 }
 
 #desc{
+  text-align: center;
   border: 1px solid #DADADA;
   color: #888;
   height: 30px;
@@ -80,6 +83,7 @@ h1 {
 }
 
 #tag{
+  text-align: center;
   border: 1px solid #DADADA;
   color: #888;
   height: 30px;
@@ -108,15 +112,17 @@ h1 {
 }
 
 #existing-ideas {
-  border-style: outset;
-  text-align: center
+  text-align: center;
 }
 
 #existing-ideas h3{
+  text-shadow: 2px 2px 3px #666666;
   text-align: center;
   background-color: gray;
   color: white;
   font-size: 25px;
+  margin-left: 30%;
+  margin-right: 30%
 }
 
 .ideas {
