@@ -8,6 +8,7 @@ class IdeaBoxApp < Sinatra::Base
     register Sinatra::Reloader
   end
 
+
   not_found do
     erb :error
   end
@@ -45,6 +46,10 @@ class IdeaBoxApp < Sinatra::Base
     idea.like!
     IdeaStore.update(id.to_i, idea.to_h)
     redirect '/'
+  end
+
+  get '/tags' do
+    erb :all_tags, locals: {grouped: IdeaStore.sort_tags }
   end
 
   get '/tags/:tag' do |tag|

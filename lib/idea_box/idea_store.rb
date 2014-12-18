@@ -57,4 +57,8 @@ class IdeaStore
       database['ideas'] << data
     end
   end
+
+  def self.sort_tags
+    all.group_by {|idea| idea.tag }
+  end
 end

@@ -1,0 +1,119 @@
+body{
+  background-image: url(NicolasCage.jpg);
+  background-attachment: fixed;
+}
+
+h1 {
+  color: #67FFD0;
+  font-family: Futura;
+  text-align: center;
+  background-color: gray;
+  margin: auto;
+  margin-bottom: 15px;
+  font-size: 55px;
+}
+
+.FORM-STUFF{
+  margin-left:auto;
+  margin-right:auto;
+  max-width: 500px;
+  background: #F7F7F7;
+  padding: 25px 15px 25px 10px;
+  font: 12px Georgia, "Times New Roman", Times, serif;
+  color: #888;
+  text-shadow: 1px 1px 1px #FFF;
+  border:1px solid #E4E4E4;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.FORM-STUFF p{
+  font-size: 25px;
+  padding: 0px 0px 10px 40px;
+  display: block;
+  border-bottom:1px solid #E4E4E4;
+  margin: -10px -15px 30px -10px;;
+  color: #888;
+  text-align: center;
+}
+
+#title{
+  border: 1px solid #DADADA;
+  color: #888;
+  height: 30px;
+  margin-bottom: 16px;
+  margin-right: 6px;
+  margin-top: 2px;
+  outline: 0 none;
+  padding: 3px 3px 3px 5px;
+  width: 70%;
+  font-size: 12px;
+  line-height:15px;
+  box-shadow: inset 0px 1px 4px #ECECEC;
+  -moz-box-shadow: inset 0px 1px 4px #ECECEC;
+  -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+}
+
+#desc{
+  border: 1px solid #DADADA;
+  color: #888;
+  height: 30px;
+  margin-bottom: 16px;
+  margin-right: 6px;
+  margin-top: 2px;
+  outline: 0 none;
+  padding: 3px 3px 3px 5px;
+  width: 70%;
+  font-size: 12px;
+  line-height:15px;
+  box-shadow: inset 0px 1px 4px #ECECEC;
+  -moz-box-shadow: inset 0px 1px 4px #ECECEC;
+  -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+}
+
+#tag{
+  border: 1px solid #DADADA;
+  color: #888;
+  height: 30px;
+  margin-bottom: 16px;
+  margin-right: 6px;
+  margin-top: 2px;
+  outline: 0 none;
+  padding: 3px 3px 3px 5px;
+  width: 70%;
+  font-size: 12px;
+  line-height:15px;
+  box-shadow: inset 0px 1px 4px #ECECEC;
+  -moz-box-shadow: inset 0px 1px 4px #ECECEC;
+  -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+}
+
+#button{
+  background: #67FFD0;
+  border: none;
+  padding: 10px 25px 10px 25px;
+  color: #FFF;
+  box-shadow: 1px 1px 5px black;
+  border-radius: 3px;
+  text-shadow: 1px 1px 1px black;
+  cursor: pointer;
+}
+
+#existing-ideas {
+  border-style: outset;
+  text-align: center
+}
+
+#existing-ideas h3{
+  text-align: center;
+  background-color: gray;
+  color: white;
+  font-size: 25px;
+}
+
+#ideas {
+  border-style: inset;
+  margin-right: 10%;
+  margin-left: 10%;
+  text-align: left
+}

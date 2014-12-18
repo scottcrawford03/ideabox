@@ -1,32 +1,38 @@
-<h1>IdeaBox</h1>
-<form action="/" method="POST">
+<h1>IdeaCAGE</h1>
+<form class="FORM-STUFF" action="/" method="POST">
   <p>
     Your Idea:
   </p>
-  <input type="text" name="idea[title]" placeholder="title"/><br/>
-  <textarea name="idea[description]" placeholder="description"></textarea><br/>
-  <input type="text" name="idea[tag]" placeholder="tag"><br/>
-  <input type="submit"/>
+  <div id="input_idea">
+    <input id="title" type="text" name="idea[title]" placeholder="title"/><br/>
+    <textarea id="desc" name="idea[description]" placeholder="description"></textarea><br/>
+    <input id="tag" type="text" name="idea[tag]" placeholder="tag"><br/>
+    <input id ="button" type="submit"/>
+  </div>
 </form>
-<h3>Existing Ideas</h3>
-<ol>
-  <% ideas.each do |idea| %>
-    <li>
-      <b>Title:</b> <%= idea.title %><br>
-      <b>Description:</b> <%= idea.description %><br>
-      <b>Tag:</b> <a href="/tags/<%= idea.tag %>"><%= idea.tag.upcase %></a><br>
-      Version: <a href="<%= idea.id %>/versions"><%= idea.version %></a><br>
-      <b><i>Created At</i></b><br>
-      <%= idea.day_created %>
-      <%= idea.time_created %>
-      <form action='<%= idea.id %>/like' method='POST' disply: inline>
-        <input type="submit" value="+">
-        <a href="/<%= idea.id %>/edit">Edit</a>
-      </form>
-      <form action="/<%= idea.id %>" method="POST">
-        <input type="hidden" name="_method" value="DELETE">
-        <input type="submit" value="delete">
-      </form>
-    </li>
-  <% end %>
-</ol>
+<div id="existing-ideas">
+  <h3>Existing Ideas</h3>
+  <a href="/tags">Sort by Tags</a>
+  <ol>
+    <% ideas.each do |idea| %>
+    <div id ="ideas">
+      <li>
+        <b>Title:</b> <%= idea.title %><br>
+        <b>Description:</b> <%= idea.description %><br>
+        <b>Tag:</b> <a href="/tags/<%= idea.tag %>"><%= idea.tag.upcase %></a><br>
+        <b>Version:</b> <a href="<%= idea.id %>/versions"><%= idea.version %></a><br>
+        <b><i>Created At</i></b><br>
+        <%= idea.day_created %> at <%= idea.time_created %>
+        <form action='<%= idea.id %>/like' method='POST' disply: inline>
+          <input type="submit" value="+">
+          <a href="/<%= idea.id %>/edit">Edit</a>
+        </form>
+        <form action="/<%= idea.id %>" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <input type="submit" value="delete">
+        </form>
+      </li>
+    </div>
+    <% end %>
+  </ol>
+</div>

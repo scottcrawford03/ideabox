@@ -5,10 +5,6 @@
     <b>Title:</b> <%= idea.title %><br>
     <b>Description:</b> <%= idea.description %><br>
     <b>Tag:</b> <a href="/tags/<%= idea.tag %>"><%= idea.tag.upcase %></a>
-    <form action='<%= idea.id %>/like' method='POST' disply: inline>
-      <input type="submit" value="+">
-      <a href="/<%= idea.id %>/edit">Edit</a>
-    </form>
     <form action="/<%= idea.id %>" method="POST">
       <input type="hidden" name="_method" value="DELETE">
       <input type="submit" value="delete">
@@ -16,4 +12,3 @@
   </li>
   <% end %>
 </ol>
-<a href="/">Home Page Bitch</a>
