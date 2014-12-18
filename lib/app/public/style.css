@@ -120,7 +120,9 @@ h1 {
 
 #ideas {
   border-style: inset;
-  margin-right: 10%;
-  margin-left: 10%;
-  text-align: left
+  margin-right: 30%;
+  margin-left: 30%;
+  text-align: left;
+  color: white;
+  background-color: rgba(144,144,144,0.3);
 }
