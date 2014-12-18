@@ -2,6 +2,13 @@ body{
   background-image: url(NicolasCage.jpg);
   background-attachment: fixed;
 }
+a{
+  color:white;
+}
+
+a:visited{
+  color: white;
+}
 
 h1 {
   color: #67FFD0;
